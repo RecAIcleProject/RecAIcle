@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RecAIcle</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Teachable Machine & TFJS (required BEFORE script.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+
+  <div class="top-left">
+    <button id="startWebcamBtn">Use Webcam</button>
+    <button id="stopWebcamBtn" class="hidden">Stop Webcam</button>
+
+    <label class="upload-btn">
+      Upload Image
+      <input type="file" id="imageUpload" accept="image/*" />
+    </label>
+  </div>
+
+  <h1 class="title">RecAIcle: Making Recycling Possible</h1>
+
+  <p class="info-text">
+    Please note that for the model to be accurate the background behind the object must be as clean as possible.
+  </p>
+
+  <div id="display-box">
+    <div id="webcam-container"></div>
+    <img id="uploadedImage" class="hidden" alt="uploaded preview" />
+  </div>
+
+  <div id="loading" class="hidden">🔄 Loading...</div>
+
+  <div id="prediction-box" class="prediction"></div>
+
+  <p class="info-text">
+    By recycling we improve the condition of our environment — small acts matter.
+  </p>
+
+  <h2 class="slogan">Let's protect our home!</h2>
+
+  <footer>created by Louiza Kosti</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
